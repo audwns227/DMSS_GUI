@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\workspace_nex1\\DMSS_GUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\workspace_nex1\\dmss_gui\\dmss_gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\workspace_nex1\\dmss_gui\\dmss_gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\workspace_nex1\\dmss_gui\\dmss_gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -25,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 382,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,8 +45,7 @@
               "RelativeToolTip": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAK4UAAAAAAAAAAAMwNAUAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-03-09T16:27:56.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-09T16:27:56.481Z"
             },
             {
               "$type": "Document",
@@ -58,12 +57,11 @@
               "RelativeToolTip": "DMSS_GUI\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T00:36:58.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-09T00:36:58.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\workspace_nex1\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "DMSS_GUI\\MainWindow.xaml",
@@ -75,13 +73,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\workspace_nex1\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "DMSS_GUI\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\workspace_nex1\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs",
-              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\workspace_nex1\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAADgv1wAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-09T00:34:08.099Z",
               "EditorCaption": ""
