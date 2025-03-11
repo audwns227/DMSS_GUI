@@ -5,6 +5,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -15,7 +16,8 @@ namespace DMSS_GUI
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {   private int flag = 0;
+        private bool isManualMode = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -47,18 +49,37 @@ namespace DMSS_GUI
                 ReceiverB_Border.Background = Brushes.Yellow;
             }
         }
-        private void AddLog(string message)
+        private async Task AddLogAsync(string message)
         {
             Problem_Log.Items.Add(message);
 
-            // 새로 추가된 항목을 자동으로 포커스(스크롤) 시킴
-            Problem_Log.SelectedIndex = Problem_Log.Items.Count - 1;
-            Problem_Log.ScrollIntoView(Problem_Log.SelectedItem);
+            await Task.Delay(10); // UI 업데이트를 기다림
+            await Dispatcher.BeginInvoke(new Action(() =>
+            {
+                Problem_Log.SelectedIndex = Problem_Log.Items.Count - 1;
+                Problem_Log.ScrollIntoView(Problem_Log.SelectedItem);
+            }), DispatcherPriority.Background);
         }
 
-        int flag = 0;
+        private void ModeChanged(object sender, RoutedEventArgs e)
+        {
+            if (Mode_Manual.IsChecked == true)
+            {
+                isManualMode = true;
+                SelectModePanel.Visibility = Visibility.Visible;
+                Target_A.IsEnabled = true;
+                Target_B.IsEnabled = true;
+            }
+            else
+            {
+                isManualMode = false;
+                SelectModePanel.Visibility = Visibility.Collapsed;
+                Target_A.IsEnabled = false;
+                Target_B.IsEnabled = false;
+            }
+        }
 
-        private void FireButton_Click(object sender, RoutedEventArgs e)
+        private async void FireButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("발사 명령을 내리시겠습니까?", "발사 확인", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
@@ -68,13 +89,13 @@ namespace DMSS_GUI
                 {
                     SystemStatus_Text.Text = "발사 실패!";
                     SystemStatus_Text.Foreground = System.Windows.Media.Brushes.Red;
-                    AddLog("발사 명령 수행 실패");
+                    await AddLogAsync("발사 명령 수행 실패");
                 }
                 else
                 {
                     SystemStatus_Text.Text = "발사 성공!";
                     SystemStatus_Text.Foreground = System.Windows.Media.Brushes.Green;
-                    AddLog("발사 명령 수행 성공");
+                    await AddLogAsync("발사 명령 수행 성공");
                 }
 
                 flag = new Random().Next(0, 2);
@@ -90,11 +111,9 @@ namespace DMSS_GUI
             else
             {
                 MessageBox.Show("취소되었습니다.", "발사 취소", MessageBoxButton.OK, MessageBoxImage.Information);
-                AddLog("발사 명령 취소");
+                await AddLogAsync("발사 명령 취소");
             }
-               
-
-            
+          
         }
     }
 }

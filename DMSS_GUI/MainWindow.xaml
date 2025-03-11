@@ -32,6 +32,20 @@
             </StackPanel>
         </Border>
 
+        <!-- 발사 모드 선택 UI -->
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
+            <TextBlock Text="발사 모드" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+            <RadioButton Name="Mode_Auto" Content="기본 모드 (가까운 센서)" IsChecked="True" Checked="ModeChanged"/>
+            <RadioButton Name="Mode_Manual" Content="선택 모드 (사용자 지정)" Checked="ModeChanged"/>
+
+            <!-- 선택 모드에서만 활성화됨 -->
+            <StackPanel Name="SelectModePanel" Visibility="Collapsed" Margin="10">
+                <TextBlock Text="발사 대상 선택" FontWeight="Bold" FontSize="14"/>
+                <RadioButton Name="Target_A" Content="Receiver A" IsEnabled="False"/>
+                <RadioButton Name="Target_B" Content="Receiver B" IsEnabled="False"/>
+            </StackPanel>
+        </StackPanel>
+        
         <!-- Receiver B (세로형 ProgressBar) -->
         <Border x:Name="ReceiverB_Border" Grid.Row="0" Grid.Column="2" Background="#FFFFFF" CornerRadius="10" Padding="5" Margin="10">
             <StackPanel HorizontalAlignment="Center">
