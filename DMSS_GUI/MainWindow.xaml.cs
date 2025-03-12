@@ -63,19 +63,22 @@ namespace DMSS_GUI
 
         private void ModeChanged(object sender, RoutedEventArgs e)
         {
-            if (Mode_Manual.IsChecked == true)
+            if(Mode_Manual != null)
             {
-                isManualMode = true;
-                SelectModePanel.Visibility = Visibility.Visible;
-                Target_A.IsEnabled = true;
-                Target_B.IsEnabled = true;
-            }
-            else
-            {
-                isManualMode = false;
-                SelectModePanel.Visibility = Visibility.Collapsed;
-                Target_A.IsEnabled = false;
-                Target_B.IsEnabled = false;
+                if (Mode_Manual.IsChecked == true)
+                {
+                    isManualMode = true;
+                    SelectModePanel.Visibility = Visibility.Visible;
+                    Target_A.IsEnabled = true;
+                    Target_B.IsEnabled = true;
+                }
+                else
+                {
+                    isManualMode = false;
+                    SelectModePanel.Visibility = Visibility.Collapsed;
+                    Target_A.IsEnabled = false;
+                    Target_B.IsEnabled = false;
+                }
             }
         }
 
@@ -95,7 +98,7 @@ namespace DMSS_GUI
                 {
                     SystemStatus_Text.Text = "발사 성공!";
                     SystemStatus_Text.Foreground = System.Windows.Media.Brushes.Green;
-                    await AddLogAsync("발사 명령 수행 성공");
+                    await AddLogAsync("발사 명령 수행 성공");           
                 }
 
                 flag = new Random().Next(0, 2);
@@ -107,6 +110,11 @@ namespace DMSS_GUI
                 // 신호 비교 후 가까운 표적 표시
                 UpdateSignalValues();
                 HighlightCloserReceiver();
+
+                //Thread.Sleep(3000);
+                //SystemStatus_Text.Text = "발사 준비";
+                //SystemStatus_Text.Foreground = System.Windows.Media.Brushes.Blue;
+
             }
             else
             {
@@ -114,6 +122,16 @@ namespace DMSS_GUI
                 await AddLogAsync("발사 명령 취소");
             }
           
+        }
+
+        private void ReceiverA_Bar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void ReceiverB_Bar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }

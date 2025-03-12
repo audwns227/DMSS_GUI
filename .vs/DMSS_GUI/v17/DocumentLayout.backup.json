@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\mac\\home\\documents\\dmss_project\\dmss_gui\\dmss_gui\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\mac\\home\\documents\\dmss_project\\dmss_gui\\dmss_gui\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|c:\\mac\\home\\documents\\dmss_project\\dmss_gui\\dmss_gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB2D9D46-A8B4-4249-9C1A-367712F9CB87}|DMSS_GUI\\DMSS_GUI.csproj|solutionrelative:dmss_gui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,29 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainModel.cs",
+              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\Model\\MainModel.cs",
+              "RelativeDocumentMoniker": "DMSS_GUI\\Model\\MainModel.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\Model\\MainModel.cs*",
+              "RelativeToolTip": "DMSS_GUI\\Model\\MainModel.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T01:03:31.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\ViewModel\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "DMSS_GUI\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\ViewModel\\MainViewModel.cs*",
+              "RelativeToolTip": "DMSS_GUI\\ViewModel\\MainViewModel.cs*",
+              "ViewState": "AgIAAAYAAADIAQAAAAAswBIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:49:23.899Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "DMSS_GUI\\MainWindow.xaml",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml",
-              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml*",
+              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-10T16:27:35.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "DMSS_GUI\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs",
-              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAmpmZmRk2wEEAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\DMSS_Project\\DMSS_GUI\\DMSS_GUI\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "DMSS_GUI\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAcwHkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T16:29:23.199Z",
               "EditorCaption": ""

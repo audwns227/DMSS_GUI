@@ -5,94 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMSS_GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="700" Background="#F2F2F2">
+        Title="DMSS_System" Height="600" Width="700" Background="#EAEAEA">
     <Grid Margin="20">
         <!-- 레이아웃 그리드 -->
         <Grid.RowDefinitions>
             <RowDefinition Height="2.5*" />
-            <!-- 상단 Progress Bar & Indicator -->
             <RowDefinition Height="1*" />
-            <!-- 하단 상태 정보 & 버튼 -->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1.2*" />
-            <!-- Indicator 비율 조정 -->
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
         <!-- Receiver A (세로형 ProgressBar) -->
-        <Border x:Name="ReceiverA_Border" Grid.Row="0" Grid.Column="0" Background="#FFFFFF" CornerRadius="10" Padding="5" Margin="10">
+        <Border Name="ReceiverA_Border" Grid.Row="0" Grid.Column="0" Background="#FFFFFF" CornerRadius="15" Padding="10" Margin="10" BorderBrush="#B0BEC5" BorderThickness="2">
             <StackPanel HorizontalAlignment="Center">
-                <TextBlock Text="Receiver A" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
-                <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" Padding="5" Margin="10">
-                    <ProgressBar Name="ReceiverA_Bar" Width="60" Height="220" Orientation="Vertical" Maximum="100" Value="70" Foreground="Blue"/>
+                <TextBlock Text="Receiver A" FontWeight="Bold" FontSize="18" Foreground="#37474F" HorizontalAlignment="Center"/>
+                <Border BorderBrush="#78909C" BorderThickness="2" CornerRadius="10" Padding="5" Margin="10">
+                    <ProgressBar Name="ReceiverA_Bar" Width="70" Height="220" Orientation="Vertical" Maximum="100" Value="70" Foreground="#1565C0" Background="#E3F2FD" ValueChanged="ReceiverA_Bar_ValueChanged"/>
                 </Border>
-                <TextBlock Name="ReceiverA_Value" Text="70" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="5"/>
+                <TextBlock Name="ReceiverA_Value" Text="70%" FontSize="16" FontWeight="Bold" Foreground="#1976D2" HorizontalAlignment="Center" Margin="5"/>
             </StackPanel>
         </Border>
 
-        <!-- 발사 모드 선택 UI -->
-        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
-            <TextBlock Text="발사 모드" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
-            <RadioButton Name="Mode_Auto" Content="기본 모드 (가까운 센서)" IsChecked="True" Checked="ModeChanged"/>
-            <RadioButton Name="Mode_Manual" Content="선택 모드 (사용자 지정)" Checked="ModeChanged"/>
+        <!-- 발사 모드 선택 UI (위치를 조정) -->
+        <Border Grid.Row="0" Grid.Column="1" Background="White" CornerRadius="10" Padding="10" BorderBrush="#B0BEC5" BorderThickness="2" Margin="0,10,0,0">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="발사 모드" FontWeight="Bold" FontSize="16" Foreground="#37474F" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <RadioButton Name="Mode_Auto" Content="기본 모드" IsChecked="True" Checked="ModeChanged" Foreground="#1976D2"/>
+                <RadioButton Name="Mode_Manual" Content="사용자 모드" Checked="ModeChanged" Foreground="#1976D2"/>
 
-            <!-- 선택 모드에서만 활성화됨 -->
-            <StackPanel Name="SelectModePanel" Visibility="Collapsed" Margin="10">
-                <TextBlock Text="발사 대상 선택" FontWeight="Bold" FontSize="14"/>
-                <RadioButton Name="Target_A" Content="Receiver A" IsEnabled="False"/>
-                <RadioButton Name="Target_B" Content="Receiver B" IsEnabled="False"/>
+                <!-- 선택 모드에서만 활성화됨 -->
+                <StackPanel Name="SelectModePanel" Visibility="Collapsed" Margin="10,5,10,0">
+                    <TextBlock Text="발사 대상 선택" FontWeight="Bold" FontSize="14" Foreground="#37474F"/>
+                    <RadioButton Name="Target_A" Content="Receiver A" IsEnabled="False" Foreground="#1976D2"/>
+                    <RadioButton Name="Target_B" Content="Receiver B" IsEnabled="False" Foreground="#1976D2"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-        
+        </Border>
+
         <!-- Receiver B (세로형 ProgressBar) -->
-        <Border x:Name="ReceiverB_Border" Grid.Row="0" Grid.Column="2" Background="#FFFFFF" CornerRadius="10" Padding="5" Margin="10">
+        <Border Name="ReceiverB_Border" Grid.Row="0" Grid.Column="2" Background="#FFFFFF" CornerRadius="15" Padding="10" Margin="10" BorderBrush="#B0BEC5" BorderThickness="2">
             <StackPanel HorizontalAlignment="Center">
-                <TextBlock Text="Receiver B" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
-                <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="5" Padding="5" Margin="10">
-                    <ProgressBar Name="ReceiverB_Bar" Width="60" Height="220" Orientation="Vertical" Maximum="100" Value="30" Foreground="Blue"/>
+                <TextBlock Text="Receiver B" FontWeight="Bold" FontSize="18" Foreground="#37474F" HorizontalAlignment="Center"/>
+                <Border BorderBrush="#78909C" BorderThickness="2" CornerRadius="10" Padding="5" Margin="10">
+                    <ProgressBar Name="ReceiverB_Bar" Width="70" Height="220" Orientation="Vertical" Maximum="100" Value="30" Foreground="#D32F2F" Background="#FFEBEE" ValueChanged="ReceiverB_Bar_ValueChanged"/>
                 </Border>
-                <TextBlock Name="ReceiverB_Value" Text="30" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="5"/>
+                <TextBlock Name="ReceiverB_Value" Text="30%" FontSize="16" FontWeight="Bold" Foreground="#D32F2F" HorizontalAlignment="Center" Margin="5"/>
             </StackPanel>
         </Border>
+
+        <!-- Fire Button -->
+        <Button Grid.Row="1" Grid.Column="1" Content="Fire" Width="140" Height="140" Background="#D32F2F" Foreground="White" FontSize="26" FontWeight="Bold" BorderThickness="0" Cursor="Hand" Click="FireButton_Click"/>
 
         <!-- System Status -->
-        <Border Grid.Row="1" Grid.Column="0" Background="White" CornerRadius="10" Padding="10" Margin="10"
-                Width="180" Height="100">
+        <Border Grid.Row="1" Grid.Column="0" Background="White" CornerRadius="10" Padding="10" Margin="10" BorderBrush="#B0BEC5" BorderThickness="2">
             <StackPanel>
-                <TextBlock Text="System Status" FontWeight="Bold" FontSize="14"/>
-                <TextBlock Name="SystemStatus_Text" Text="발사 준비" FontSize="16" Foreground="Blue"/>
+                <TextBlock Text="System Status" FontWeight="Bold" FontSize="14" Foreground="#37474F"/>
+                <TextBlock Name="SystemStatus_Text" Text="발사 준비" FontSize="16" Foreground="#1976D2"/>
             </StackPanel>
         </Border>
 
-        <!-- Fire Button (크기 조정) -->
-        <Button Grid.Row="1" Grid.Column="1" Content="Fire" Width="140" Height="140"
-                Background="Red" Foreground="White" FontSize="26" FontWeight="Bold"
-                BorderThickness="0" Cursor="Hand" Click="FireButton_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border Background="{TemplateBinding Background}" CornerRadius="70" 
-                                        Padding="10" Width="140" Height="140">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
-        </Button>
-
         <!-- Problem Log -->
-        <Border Grid.Row="1" Grid.Column="2" Background="White" CornerRadius="10" Padding="10" Margin="10"
-                Width="180" Height="100">
+        <Border Grid.Row="1" Grid.Column="2" Background="White" CornerRadius="10" Padding="10" Margin="10" BorderBrush="#B0BEC5" BorderThickness="2">
             <StackPanel>
-                <TextBlock Text="LOG" FontWeight="Bold" FontSize="14"/>
+                <TextBlock Text="LOG" FontWeight="Bold" FontSize="14" Foreground="#37474F"/>
                 <ListBox Name="Problem_Log" Height="80">
-                    <ListBoxItem Content="센서 오류 감지" Foreground="Red"/>
+                    <ListBoxItem Content="센서 오류 감지" Foreground="#D32F2F"/>
                 </ListBox>
             </StackPanel>
         </Border>
